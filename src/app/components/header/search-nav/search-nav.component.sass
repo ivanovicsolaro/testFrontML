@@ -1,0 +1,84 @@
+
+$color-primary: #FFE600
+.header-nav
+  width: 100%
+  background-color: $color-primary
+  height: auto
+  position: relative
+
+  .container
+    padding: 5px
+
+/* Style the form - display items horizontally */
+.search
+  display: flex
+  align-items: center
+
+.logoML
+  vertical-align: middle
+  width: 5%
+
+/* Style the input fields */
+.form-search
+  width: 95% !important
+  input
+    width: 92%
+    vertical-align: middle
+    margin: 5px 0px 5px 0
+    padding: 10px
+    font-size: 18px
+    background-color: #fff
+    border: 1px solid #ddd
+    heigth: 39px
+    border: 0 rgba(0,0,0,.2)
+    border-radius: 2px 0px 0px 2px
+
+/* Style the submit button */
+.form-search button
+  background-color: #fff
+  width: 39px
+  height: 37px
+  background-color: #eee
+  border: none
+  border-radius: 0 2px 2px 0
+  vertical-align: middle
+  :hover
+    cursor: pointer
+
+.icon-search
+  padding: 0px
+  margin: 0px
+  vertical-align: middle
+  width: 1.2em
+
+/* Add responsiveness - display the form controls vertically instead of horizontally on screens that are less than 800px wide */
+@media (max-width: 900px)
+
+  .logoML
+    vertical-align: middle
+    width: 10%
+    padding-left: 20px
+
+  .form-search
+    flex-direction: column
+    align-items: stretch
+    width: 80%
+
+  .form-search input
+    margin: 10px 0
+    width: 80%
+
+  .form-search button
+    width: 7%
+
+
+@media (max-width: 600px)
+
+  .logoML
+    img
+      width: 2em
+
+  .form-search button
+    width: 10%
+
+

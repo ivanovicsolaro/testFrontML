@@ -1,0 +1,13 @@
+<section class="header-nav">
+  <div class="search container">
+      <div class="logoML"><a routerLink=""><img src="./assets/images/icons/Logo_ML.png"></a></div>
+      <form class="form-search" [formGroup]="formSearchNav" (ngSubmit)="search()">
+
+        <input type="text" placeholder="Nunca dejes de buscar" formControlName="searchText">
+        <button type="submit">
+          <img class="icon-search" src="./assets/images/icons/ic_Search.png">
+        </button>
+      </form>
+  </div>
+
+</section>
