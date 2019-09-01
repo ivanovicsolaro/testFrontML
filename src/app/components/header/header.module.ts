@@ -1,18 +1,23 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { SearchNavComponent } from './search-nav/search-nav.component';
+import { BreadcrumbComponent } from './breadcrumb/breadcrumb.component';
 import { ReactiveFormsModule } from '@angular/forms';
-
-
+import { RouterModule } from '@angular/router';
 
 @NgModule({
-  declarations: [SearchNavComponent],
+  declarations: [
+    BreadcrumbComponent,
+    SearchNavComponent,
+  ],
   imports: [
     CommonModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    RouterModule
   ],
   exports: [
-    SearchNavComponent
+    SearchNavComponent,
+    BreadcrumbComponent
   ]
 })
 export class HeaderModule { }

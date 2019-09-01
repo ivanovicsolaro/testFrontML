@@ -1,6 +1,32 @@
 <section class="container wrapper">
-    <section class="related-searches-section">
-      <p> Búsquedas relacionadas:&nbsp; </p>
-        <ul class="related-searches"> <li> <a href="https://listado.mercadolibre.com.ar/iphone-ipad-table#D[R:iphone ipad,P:1,Q:5]"> iphone ipad table </a> <span class="separator">-</span> </li> <li> <a href="https://listado.mercadolibre.com.ar/iphone-ipad-tablet#D[R:iphone ipad,P:2,Q:5]"> iphone ipad tablet </a> <span class="separator">-</span> </li> <li> <a href="https://listado.mercadolibre.com.ar/iphone-ipad-usado#D[R:iphone ipad,P:3,Q:5]"> iphone ipad usado </a> <span class="separator">-</span> </li> <li> <a href="https://listado.mercadolibre.com.ar/tablet-iphone-ipad#D[R:iphone ipad,P:4,Q:5]"> tablet iphone ipad </a> <span class="separator">-</span> </li> <li> <a href="https://listado.mercadolibre.com.ar/cable-iphone-ipad#D[R:iphone ipad,P:5,Q:5]"> cable iphone ipad </a> </li> </ul> </section>
-</section>
+  <app-breadcrumb [categories]="categories"></app-breadcrumb>
+  <section class="result-section">
+      <ul>
+        <li *ngFor="let i of resultsItems"
+            class="item-list"
+            routerLink="/items/{{i.id}}">
+
+            <div class="item-wrapper">
+              <div class="item-image">
+                <a>
+                    <figure>
+                        <img src="{{i.picture}}">
+                    </figure>
+                </a>
+
+              </div>
+              <div class="item-info">
+                <div class="item-price">$ {{i.price.amount | thousandsPipe}}</div>
+                <div class="item-title">{{i.title}}</div>
+              </div>
+              <div class="item-location">
+                  <p>Capital Federal</p>
+              </div>
+
+            </div>
+
+        </li>
+      </ul>
+
+  </section>
 
