@@ -25,8 +25,8 @@ export class SearchComponent implements OnInit {
     });
   }
 
-  async ngOnInit() {
-    await this.seoService.generatesTags({
+  ngOnInit() {
+    this.seoService.generatesTags({
       title: this.title,
       description: 'La comunidad de compra y venta online más grande de América Latina.',
       slug: this.categories,

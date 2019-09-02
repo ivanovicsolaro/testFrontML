@@ -7,12 +7,7 @@
                   <figure>
                       <img src="{{item?.picture}}">
                   </figure>
-                  <div class="description">
-                      <h1>Descripción del Producto</h1>
-                      <p>
-                        {{item?.description}}
-                      </p>
-                  </div>
+                  
             </div>
             <div class="item-info">
               <div class="item-subtitle"> <span>{{ item?.condition | itemCondition}} - </span><span> {{item?.sold_quantity}} vendidos</span> </div>
@@ -21,6 +16,14 @@
               <button>Comprar</button>
             </div>
         </section>
+        <div class="description">
+            <h1>Descripción del Producto</h1>
+            <p>
+              {{item?.description}}
+            </p>
+        </div>
+        
+        
 
 
     </div>

@@ -2,9 +2,10 @@
   <app-breadcrumb [categories]="categories"></app-breadcrumb>
   <section class="result-section">
       <ul>
-        <li *ngFor="let i of resultsItems"
+        <li *ngFor="let i of resultsItems; let index = index"
             class="item-list"
-            routerLink="/items/{{i.id}}">
+            routerLink="/items/{{i.id}}"
+            tabindex="{{index + 1}}">
 
             <div class="item-wrapper">
               <div class="item-image">
@@ -16,8 +17,8 @@
 
               </div>
               <div class="item-info">
-                <div class="item-price">$ {{i.price.amount | thousandsPipe}}</div>
-                <div class="item-title">{{i.title}}</div>
+                <div class="item-price">$ {{i.price.amount | thousandsPipe}}<span class="free-shipping" *ngIf="i.free_shipping"> <img title="Envío Gratis" src="./assets/images/icons/ic_shipping.png"> </span></div>
+                <div class="item-title">{{i.title}} </div>
               </div>
               <div class="item-location">
                   <p>Capital Federal</p>

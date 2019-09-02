@@ -73,7 +73,7 @@ itemsRoutes.get('/items', ( req: Request, res: Response) => {
                     },
                 picture: e.thumbnail,
                 condition: e.condition,
-                free_shipping: e.free_shipping
+                free_shipping: e.shipping.free_shipping
             }
         );
     });
