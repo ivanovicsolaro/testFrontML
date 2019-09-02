@@ -19,7 +19,25 @@ export class SearchNavComponent implements OnInit {
   }
 
   search() {
+    if (this.chequearID(this.formSearchNav.value.searchText )) {
+      this.router.navigate(['/items/' + this.formSearchNav.value.searchText]);
+    } else {
       this.router.navigate(['/items'], { queryParams: { search: this.formSearchNav.value.searchText } });
+    }
+  }
+
+  chequearID( cadena: string ) {
+    let isID = true;
+
+    if (!(cadena.length >= 12)) {
+      isID = false;
+    }
+
+    if (this.formSearchNav.value.searchText.slice(0, 2) !== 'ML') {
+      isID = false;
+    }
+
+    return isID;
   }
 
 }

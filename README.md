@@ -16,4 +16,8 @@ Instalar NODE y NPM desde https://nodejs.org/en/download/.
     B - Dentro de la carpeta /client, ejecute el comando "npm start" para correr el frontend Angular, en la url http://localhost:4000.
     C - Acceda manualmente a la URL http://localhost:4000
 
+#Ejecución de pruebas funcionales
+
+1 - Dentro de la carpeta /client, ejecute el comando "npm run test".
+
     

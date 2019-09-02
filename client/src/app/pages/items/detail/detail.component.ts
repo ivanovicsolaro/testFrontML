@@ -26,7 +26,6 @@ export class DetailComponent implements OnInit {
   ngOnInit() {
     this.seoService.generatesTags({
       title: this.title,
-      description: this.item.description,
       slug: this.title,
     });
   }
