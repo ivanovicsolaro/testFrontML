@@ -18,6 +18,8 @@ Instalar NODE y NPM desde https://nodejs.org/en/download/.
 
 #Ejecución de pruebas funcionales
 
+IMPORTANTE: este paquete requiere el JDK de Java. Puede descargalo desde https://www.java.com/es/download/faq/develop.xml.
+
 1 - Dentro de la carpeta /client, ejecute el comando "npm run test".
 
     
