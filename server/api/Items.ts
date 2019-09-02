@@ -30,7 +30,7 @@ itemsRoutes.get('/items/:id', ( req: Request, res: Response) => {
             title: item.data.title,
             price: {
                 currency: item.data.currency_id,
-                amount: numeral(item.data.price).format('0.').replace(/\./g,'') ,
+                amount: numeral(item.data.price).format('0,0.').replace(/\,/g,'.') ,
                 decimals: numeral(item.data.price).format('.00').replace(/\./g,'')
             },
             picture: item.data.pictures[0].url,
