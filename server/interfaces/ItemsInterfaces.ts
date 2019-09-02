@@ -40,3 +40,15 @@ export interface ResultItem{
     condition: string,
     free_shipping: boolean
 }
+
+export interface ResponseItem{ 
+    id: string; 
+    title: string; 
+    currency_id: string; 
+    price: any; 
+    thumbnail: string; 
+    condition: string; 
+    shipping: { 
+        free_shipping: boolean; 
+    }; 
+}

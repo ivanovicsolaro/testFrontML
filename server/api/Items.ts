@@ -1,5 +1,5 @@
 import { Router, Request, Response } from 'express';
-import { ItemDetail, ResultSearchItem, ResultItem } from '../interfaces/ItemsInterfaces';
+import { ItemDetail, ResultItem, ResponseItem } from '../interfaces/ItemsInterfaces';
 
 var itemsRoutes = Router();
 var axios = require('axios');
@@ -11,7 +11,9 @@ var categories: string[] = [];
 var itemDetail: ItemDetail;
 var resultItems: ResultItem[] = [];
 
-/** Obtención del detalle de un item según el ID */
+/** Obtención del detalle de un item según el ID 
+ *  Return: Object: ItemDetail 
+*/
 itemsRoutes.get('/items/:id', ( req: Request, res: Response) => {
 
     axios.all([
@@ -42,13 +44,13 @@ itemsRoutes.get('/items/:id', ( req: Request, res: Response) => {
     res.json(
         itemDetail
     )
-    })).catch(error => {
-    console.log(error);
-    });
+    }))
 });
 
 
-/** Obtención del detalle de un item según el ID */
+/** Busqueda resultados según una cadena dada :query
+ *  Return Object: ResultItems
+*/
 itemsRoutes.get('/items', ( req: Request, res: Response) => { 
     axios.all([
     axios.get('https://api.mercadolibre.com/sites/MLA/search?q='+ req.query.q +'&limit=4&offset=1'),
@@ -57,11 +59,12 @@ itemsRoutes.get('/items', ( req: Request, res: Response) => {
     categories = []; 
     resultItems = [];   
     /** Inserto las categorias en un array */
-    predictCategory.data.path_from_root.forEach( e => {
+    predictCategory.data.path_from_root.forEach( (e: { [x: string]: string; }) => {
        categories.push(e['name']);
     });
     
-    searchResult.data.results.forEach( e => {
+    /** Inserto los items en el un objeto */
+    searchResult.data.results.forEach( (e: ResponseItem) => {
         resultItems.push(
             {
                 id: e.id,
@@ -78,6 +81,7 @@ itemsRoutes.get('/items', ( req: Request, res: Response) => {
         );
     });
 
+    /** Retorno Obj Json */
     res.json({
         author: {
             name: '',
@@ -88,9 +92,7 @@ itemsRoutes.get('/items', ( req: Request, res: Response) => {
         }
     )
 
-    })).catch(error => {
-    console.log(error);
-    });
+    }))
 });
 
 
