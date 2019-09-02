@@ -1,0 +1,24 @@
+{
+  "name": "testfrontmlservernode",
+  "version": "1.0.0",
+  "description": "Servidor Node TestFrontML",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon dist/"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/cors": "^2.8.6",
+    "axios": "^0.16.2",
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "mongoose": "^5.6.11",
+    "numeral": "^2.0.6",
+    "request": "^2.88.0"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.1"
+  }
+}

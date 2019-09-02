@@ -5,19 +5,19 @@
         <section class="item-wrapper">
             <div class="item-container">
                   <figure>
-                      <img src="{{item.picture}}">
+                      <img src="{{item?.picture}}">
                   </figure>
                   <div class="description">
                       <h1>Descripción del Producto</h1>
                       <p>
-                        {{item.description}}
+                        {{item?.description}}
                       </p>
                   </div>
             </div>
             <div class="item-info">
-              <div class="item-subtitle"> <span>{{ item.condition | itemCondition}} - </span><span> {{item.sold_quantity}} vendidos</span> </div>
-              <div class="item-title">{{item.title}}</div>
-              <div class="item-price"><p>$ {{item.price.amount | thousandsPipe}} <span class="decimals">{{item.price.decimals}}</span></p></div>
+              <div class="item-subtitle"> <span>{{ item?.condition | itemCondition}} - </span><span> {{item?.sold_quantity}} vendidos</span> </div>
+              <div class="item-title">{{ item?.title }}</div>
+              <div class="item-price"><p>$ {{ item?.price.amount }} <span class="decimals">{{item?.price.decimals}}</span></p></div>
               <button>Comprar</button>
             </div>
         </section>

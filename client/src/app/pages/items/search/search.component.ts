@@ -21,10 +21,10 @@ export class SearchComponent  {
   }
 
   getResults( query ) {
-      this.itemsService.search(query.search)
+    this.itemsService.search(query.search)
       .subscribe( result => {
-       this.resultsItems = result.items;
-       this.categories = result.categories;
-      });
+        this.resultsItems = result.items;
+        this.categories = result.categories;
+    });
   }
 }
