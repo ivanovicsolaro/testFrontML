@@ -24,7 +24,8 @@ IMPORTANTE: este paquete requiere el JDK de Java. Puede descargalo desde https:/
 
 
 
-#TECNOLOGÍAS UTILIZADAS
+##TECNOLOGÍAS UTILIZADAS
+
     Server: 
         Nodejs
         Express
