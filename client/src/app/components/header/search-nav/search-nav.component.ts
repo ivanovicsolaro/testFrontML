@@ -19,7 +19,7 @@ export class SearchNavComponent implements OnInit {
   }
 
   search() {
-    this.router.navigate(['/items'], { queryParams: { search: this.formSearchNav.value.searchText } });
+      this.router.navigate(['/items'], { queryParams: { search: this.formSearchNav.value.searchText } });
   }
 
 }
