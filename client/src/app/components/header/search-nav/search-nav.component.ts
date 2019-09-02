@@ -7,16 +7,13 @@ import { FormControl, FormGroup } from '@angular/forms';
   templateUrl: './search-nav.component.html',
   styleUrls: ['./search-nav.component.sass']
 })
-export class SearchNavComponent implements OnInit {
+export class SearchNavComponent {
 
   formSearchNav = new FormGroup({
     searchText: new FormControl()
   });
 
   constructor( private router: Router) { }
-
-  ngOnInit() {
-  }
 
   search() {
     if (this.chequearID(this.formSearchNav.value.searchText )) {

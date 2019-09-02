@@ -15,6 +15,7 @@ export class SearchComponent implements OnInit {
   resultSearch: ResultSearchItem;
   resultsItems: ResultItem[] = [];
   categories: String[] = [];
+  lastElement: string;
 
   constructor(  private route: ActivatedRoute,
                 private itemsService: ItemsService,
@@ -38,6 +39,7 @@ export class SearchComponent implements OnInit {
       .subscribe( result => {
         this.resultsItems = result.items;
         this.categories = result.categories;
+        this.lastElement = result.categories.pop();
         this.title.setTitle(this.categories.join().replace(/,/g , ' - ') + ' en Mercado Libre');
     });
   }

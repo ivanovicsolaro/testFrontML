@@ -1,16 +1,20 @@
+$color-link: #999999
+$color-link-hover: #000
+
 .related-searches-section
     font-size: 14px
     margin: 0
 .breadcrumb
+    color: $color-link   
     margin: 16px 0px 16px 0px
     li+li :before
         padding: 0px 8px 0px 8px
         content: ">"
     li
       display: inline
-      a
-        color: #999999        
-      &:hover       
-        cursor: pointer
-        
-        
+      a 
+        &:hover       
+        cursor: pointer   
+.bold
+  color: $color-link   
+  font-weight: bold
