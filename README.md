@@ -22,4 +22,23 @@ IMPORTANTE: este paquete requiere el JDK de Java. Puede descargalo desde https:/
 
 1 - Dentro de la carpeta /client, ejecute el comando "npm run test".
 
+
+
+#TECNOLOGÍAS UTILIZADAS
+    Server: 
+        Nodejs
+        Express
+    
+    Cliente:
+        JS - Angular 8
+        HTML
+        CSS - Sass
+
+    Seo 
+        Angular Universal Lib
+    
+    Testing:
+        Protractor Cucumber Framework
+
+
     
