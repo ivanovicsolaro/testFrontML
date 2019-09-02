@@ -11,7 +11,7 @@ import { HeaderModule } from './components/header/header.module';
     AppComponent
   ],
   imports: [
-    BrowserModule,
+    BrowserModule.withServerTransition({appId: 'ng-universal-denystified'}),
     AppRoutingModule,
     HeaderModule,
     HttpClientModule

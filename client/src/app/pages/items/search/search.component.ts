@@ -38,7 +38,7 @@ export class SearchComponent implements OnInit {
       .subscribe( result => {
         this.resultsItems = result.items;
         this.categories = result.categories;
-        this.title.setTitle(this.categories.join().replace(/,/g , ' - ') + 'en Mercado Libre');
+        this.title.setTitle(this.categories.join().replace(/,/g , ' - ') + ' en Mercado Libre');
     });
   }
 }
